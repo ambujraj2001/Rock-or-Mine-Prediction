@@ -304,11 +304,9 @@ if st.button('Test Data'):
     i+=1
     if i%2==0:
         test2()
-        st.text(i)
         i=1
     else:
         test3()
-        st.text(i)
         i=0
     
 
