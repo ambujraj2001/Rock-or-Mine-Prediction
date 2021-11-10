@@ -41,9 +41,9 @@ def test1():
     input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
     prediction = model.predict(input_data_reshaped)
     if (prediction[0]=='R'):
-        st.text('The object is a Rock')
+        st.warning('The object is a Rock')
     else:
-        st.text('The object is a Mine')
+        st.error('The object is a Mine')
 
 
 
@@ -61,9 +61,9 @@ def test2():
     input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
     prediction = model.predict(input_data_reshaped)
     if (prediction[0]=='R'):
-        st.write('The object is a Rock')
+        st.warning('The object is a Rock')
     else:
-        st.write('The object is a Mine')
+        st.error('The object is a Mine')
 
 
 
@@ -80,9 +80,9 @@ def test3():
     input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
     prediction = model.predict(input_data_reshaped)
     if (prediction[0]=='R'):
-        st.write('The object is a Rock')
+        st.warning('The object is a Rock')
     else:
-        st.write('The object is a Mine')
+        st.error('The object is a Mine')
 
 
 
@@ -99,9 +99,9 @@ def test4():
     input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
     prediction = model.predict(input_data_reshaped)
     if (prediction[0]=='R'):
-        st.write('The object is a Rock')
+        st.warning('The object is a Rock')
     else:
-        st.write('The object is a Mine')
+        st.error('The object is a Mine')
 
 
 
