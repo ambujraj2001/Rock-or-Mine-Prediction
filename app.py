@@ -316,9 +316,9 @@ if st.button('Test Data'):
 
 
 
-
 logo=Image.open('logo.png')
 st.sidebar.image(logo, caption=None, width=300, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
+
 
 
 add_selectbox = st.sidebar.title(
