@@ -291,8 +291,10 @@ li = list(title.split(","))
 if st.button('Test Data'):
     if i%2==0:
         test2()
+        i+=1
     else:
         test3()
+        i+=1
     
 
 
