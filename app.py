@@ -313,20 +313,7 @@ if st.button('Test Data'):
     
 
 
-<<<<<<< HEAD
    
-=======
-
-
-
-
-
-
-
-    
-
-    
->>>>>>> 22914b536f1510f40f8c3fba3bcd5a32d3336341
 add_selectbox = st.sidebar.title(
     "Team 28"
 )
