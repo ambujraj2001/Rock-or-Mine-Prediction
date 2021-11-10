@@ -12,7 +12,7 @@ def view():
     sonar_data = pd.read_csv('sonar data.csv',header=None)
     st.dataframe(sonar_data, 700, 300)
     
-    
+
 
 def train_model():
     sonar_data = pd.read_csv('sonar data.csv',header=None)
