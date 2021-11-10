@@ -7,7 +7,7 @@ import streamlit as st
 import time
 from PIL import Image
 favicon=Image.open('favicon.jpeg')
-st.set_page_config(page_title='Rock-MIne Predict', page_icon=favicon, layout="centered", initial_sidebar_state="auto", menu_items=None)
+st.set_page_config(page_title='Rock-Mine Predict', page_icon=favicon, layout="centered", initial_sidebar_state="auto", menu_items=None)
 def view():
     sonar_data = pd.read_csv('sonar data.csv',header=None)
     st.dataframe(sonar_data, 700, 300)
@@ -289,6 +289,7 @@ i=0
 title = st.text_input('Enter Data')
 li = list(title.split(","))
 if st.button('Test Data'):
+    i+=1
     if i%2==0:
         test2()
         i+=1
@@ -298,14 +299,7 @@ if st.button('Test Data'):
     
 
 
-
-
-
-
-
-    
-
-    
+   
 add_selectbox = st.sidebar.title(
     "Team 28"
 )
