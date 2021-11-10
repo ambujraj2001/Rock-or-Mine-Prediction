@@ -294,15 +294,21 @@ st.markdown(html_hr, unsafe_allow_html=True)
 
 html_subheading = """
     <h3>
-        Enter frequency readings to predict the object
+        Enter frequencies to predict the data
     </h3>
     """
 st.markdown(html_subheading, unsafe_allow_html=True)
 
+i=0
 title = st.text_input('Enter Data')
 li = list(title.split(","))
 if st.button('Test Data'):
-    test2()
+    if i%2==0:
+        test2()
+        i+=1
+    else:
+        test3()
+        i+=1
     
 
 
