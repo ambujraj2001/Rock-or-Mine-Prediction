@@ -109,7 +109,7 @@ def test4():
         
 
 html_temp = """
-    <div style="background-color:#2f5888 ;padding:10px 10px 0px 10px; margin-bottom:10vh; border-radius: 0.5rem; box-shadow: #2736466e 2px 5px 8px;"">
+    <div style="background-color:#2f5888 ;padding:10px 10px 0px 10px; margin-bottom:10vh; border-radius: 0.5rem; box-shadow: #2736466e 2px 5px 8px;""> 
         <h2 style="color:white;text-align:center;">Rock or Mine Prediction </h2>
         <h3 style="padding-bottom:20px ; font-size: 2vh; color:white; text-align:center;">Binary Classification ML Model</h3>
     </div>
@@ -171,6 +171,14 @@ html_hr = """
     </div>
     """
 st.markdown(html_hr, unsafe_allow_html=True)
+
+html_subheading = """
+    <h3>
+        Some Examples of our Trained Model
+    </h3>
+    """
+st.markdown(html_subheading, unsafe_allow_html=True)
+
 
 
 html_arraydata = """
@@ -284,6 +292,12 @@ html_hr = """
     """
 st.markdown(html_hr, unsafe_allow_html=True)
 
+html_subheading = """
+    <h3>
+        Enter frequencies to predict the data
+    </h3>
+    """
+st.markdown(html_subheading, unsafe_allow_html=True)
 
 i=0
 title = st.text_input('Enter Data')
@@ -299,7 +313,20 @@ if st.button('Test Data'):
     
 
 
+<<<<<<< HEAD
    
+=======
+
+
+
+
+
+
+
+    
+
+    
+>>>>>>> 22914b536f1510f40f8c3fba3bcd5a32d3336341
 add_selectbox = st.sidebar.title(
     "Team 28"
 )
