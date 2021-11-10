@@ -285,11 +285,14 @@ html_hr = """
 st.markdown(html_hr, unsafe_allow_html=True)
 
 
-
+i=0
 title = st.text_input('Enter Data')
 li = list(title.split(","))
 if st.button('Test Data'):
-    test2()
+    if i%2==0:
+        test2()
+    else:
+        test3()
     
 
 
