@@ -106,8 +106,6 @@ def test4():
 
 
 
-        
-
 html_temp = """
     <div style="background-color:#2f5888 ;padding:10px 10px 0px 10px; margin-bottom:10vh; border-radius: 0.5rem; box-shadow: #2736466e 2px 5px 8px;""> 
         <h2 style="color:white;text-align:center;">Rock or Mine Prediction </h2>
@@ -306,27 +304,23 @@ if st.button('Test Data'):
     i+=1
     if i%2==0:
         test2()
-        i+=1
+        st.text(i)
+        i=1
     else:
         test3()
-        i+=1
+        st.text(i)
+        i=0
     
 
 
-<<<<<<< HEAD
-   
-=======
 
 
 
 
+logo=Image.open('logo.png')
+st.sidebar.image(logo, caption=None, width=300, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
 
 
-
-    
-
-    
->>>>>>> 22914b536f1510f40f8c3fba3bcd5a32d3336341
 add_selectbox = st.sidebar.title(
     "Team 28"
 )
