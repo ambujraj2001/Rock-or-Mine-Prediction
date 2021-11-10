@@ -104,6 +104,21 @@ def test4():
         st.error('The object is a Mine')
 
 
+def testlinew(input_data):
+    sonar_data = pd.read_csv('sonar data.csv',header=None)
+    sonar_data.head()
+    X = sonar_data.drop(columns=60, axis=1)
+    Y = sonar_data[60]
+    X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size = 0.1, stratify=Y, random_state=1)
+    model = LogisticRegression()
+    model.fit(X_train, Y_train)
+    input_data_as_numpy_array = np.asarray(input_data)
+    input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
+    prediction = model.predict(input_data_reshaped)
+    if (prediction[0]=='R'):
+        st.warning('The object is a Rock')
+    else:
+        st.error('The object is a Mine')
 
 
 html_temp = """
@@ -298,16 +313,22 @@ html_subheading = """
 st.markdown(html_subheading, unsafe_allow_html=True)
 
 i=0
-title = st.text_input('Enter Data')
+title = st.text_area('Enter Data', value="0")
 li = list(title.split(","))
+linew = []
+for item in li:
+    item = float(item)
+    linew.append(item)
+
+linew = tuple(linew)
+
+
+
 if st.button('Test Data'):
-    i+=1
-    if i%2==0:
-        test2()
-        i=1
-    else:
-        test3()
-        i=0
+    testlinew(linew)
+
+
+
     
 
 
