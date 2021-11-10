@@ -121,6 +121,49 @@ def testlinew(input_data):
         st.error('The object is a Mine')
 
 
+
+def showgraph():
+    sonar_data = pd.read_csv('sonar data.csv',header=None)
+    sonar_data.head()
+    
+    rock_x = sonar_data.iloc[0:97].mean(axis=1)
+    rock_x.tolist()
+    freq_x = list(range(1,98))
+
+    mine_x = sonar_data.iloc[97:209].mean(axis=1)
+    mine_x.tolist()
+    freq_y = list(range(1,112))
+
+    #resetting index of mine_x
+    mine_xnew = []
+    for i in range(97,194):
+        mine_xnew.append(mine_x[i])
+
+    dataframe1 = pd.DataFrame(
+        {
+            'Rock_Frequency':rock_x,
+            'Mine_Frequency':mine_xnew
+        }
+    )
+    chartdata = pd.DataFrame(
+        dataframe1,
+        columns=['a','b']
+    )
+    html_hr = """
+    <div>
+        <hr>
+    </div>
+    """
+    st.markdown(html_hr, unsafe_allow_html=True)
+    st.subheader('Plot of Rock or Mine based on their mean frequency per observation')
+    st.caption('x-axis: &nbsp &nbsp Observations')
+    st.caption('y-axis: &nbsp &nbsp Mean-Frequency')
+    st.line_chart(dataframe1)
+
+
+
+
+
 html_temp = """
     <div style="background-color:#2f5888 ;padding:10px 10px 0px 10px; margin-bottom:10vh; border-radius: 0.5rem; box-shadow: #2736466e 2px 5px 8px;""> 
         <h2 style="color:white;text-align:center;">Rock or Mine Prediction </h2>
@@ -159,6 +202,8 @@ st.markdown(html_hr, unsafe_allow_html=True)
 if st.button('Show Statistical Measure of the Data'):
     sonar_data = pd.read_csv('sonar data.csv',header=None)
     st.write(sonar_data.describe())
+    showgraph()
+
 html_hr = """
     <div>
         <hr>
@@ -341,7 +386,7 @@ st.sidebar.image(logo, caption=None, width=300, use_column_width=None, clamp=Fal
 
 
 add_selectbox = st.sidebar.title(
-    "Team 28"
+    "Submitted by: Team 28"
 )
 add_selectbox = st.sidebar.text(
     "Members: \n"
@@ -360,7 +405,7 @@ html_sidebar = """
         <p>
             We use active sonar system to detect the frequencies of different materials and classify them into Rocks or Mine using our ML model 
             <br/>
-            <a href="google.com">More info...</a>
+            <a href="https://drive.google.com/file/d/1NGAVV7uIOngc_JfOFemKBRBHYlPqdxet/view?usp=sharing">More info...</a>
         </p>
     </div>
     """
