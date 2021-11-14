@@ -106,7 +106,7 @@ def test4():
 
 def testlinew(input_data):
     sonar_data = pd.read_csv('sonar data.csv',header=None)
-    sonar_data.head()
+    #sonar_data.head()
     X = sonar_data.drop(columns=60, axis=1)
     Y = sonar_data[60]
     X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size = 0.1, stratify=Y, random_state=1)
