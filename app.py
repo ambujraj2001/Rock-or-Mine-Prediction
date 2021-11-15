@@ -16,7 +16,7 @@ def view():
 
 def train_model():
     sonar_data = pd.read_csv('sonar data.csv',header=None)
-    sonar_data.head()
+    # sonar_data.head()
     X = sonar_data.drop(columns=60, axis=1)
     Y = sonar_data[60]
     X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size = 0.1, stratify=Y, random_state=1)
@@ -30,7 +30,6 @@ def train_model():
 
 def test1():
     sonar_data = pd.read_csv('sonar data.csv',header=None)
-    sonar_data.head()
     X = sonar_data.drop(columns=60, axis=1)
     Y = sonar_data[60]
     X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size = 0.1, stratify=Y, random_state=1)
@@ -50,7 +49,6 @@ def test1():
 
 def test2():
     sonar_data = pd.read_csv('sonar data.csv',header=None)
-    sonar_data.head()
     X = sonar_data.drop(columns=60, axis=1)
     Y = sonar_data[60]
     X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size = 0.1, stratify=Y, random_state=1)
@@ -69,7 +67,6 @@ def test2():
 
 def test3():
     sonar_data = pd.read_csv('sonar data.csv',header=None)
-    sonar_data.head()
     X = sonar_data.drop(columns=60, axis=1)
     Y = sonar_data[60]
     X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size = 0.1, stratify=Y, random_state=1)
@@ -88,7 +85,6 @@ def test3():
 
 def test4():
     sonar_data = pd.read_csv('sonar data.csv',header=None)
-    sonar_data.head()
     X = sonar_data.drop(columns=60, axis=1)
     Y = sonar_data[60]
     X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size = 0.1, stratify=Y, random_state=1)
@@ -106,7 +102,6 @@ def test4():
 
 def testlinew(input_data):
     sonar_data = pd.read_csv('sonar data.csv',header=None)
-    #sonar_data.head()
     X = sonar_data.drop(columns=60, axis=1)
     Y = sonar_data[60]
     X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size = 0.1, stratify=Y, random_state=1)
@@ -124,7 +119,6 @@ def testlinew(input_data):
 
 def showgraph():
     sonar_data = pd.read_csv('sonar data.csv',header=None)
-    sonar_data.head()
     
     rock_x = sonar_data.iloc[0:97].mean(axis=1)
     rock_x.tolist()
